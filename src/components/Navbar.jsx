@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector';
+import { useSelector } from 'react-redux';
 import { FaMicrophone, FaRegSun, FaAngleLeft } from 'react-icons/fa';
 import Logo from '../assets/covid-19.png';
 
@@ -27,9 +27,16 @@ const Navbar = () => {
             <FaAngleLeft onClick={() => navigate(-1)} size={23} className="cursor-pointer" />
             <span className="font-bold text-xl">{name}</span>
           </div>
-          <div className="flex items"></div>
+          <div className="flex items-center gap-2">
+            <img src={Logo} alt="logo" className="w-10 md:w-12" />
+            <span className="font-semibold text-xl">{`${name}'s Cases`}</span>
+          </div>
         </>
       )}
+      <div className="flex items-center gap-3 md:text-xl">
+        <FaMicrophone className="cursor-pointer" />
+        <FaRegSun className="cursor-pointer" />
+      </div>
     </nav>
   );
 };
