@@ -1,0 +1,37 @@
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector';
+import { FaMicrophone, FaRegSun, FaAngleLeft } from 'react-icons/fa';
+import Logo from '../assets/covid-19.png';
+
+const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { name } = useSelector((state) => state.home.continent);
+
+  return (
+    <nav className="bg-[#ec4c8b] flex items-center justify-between p-3 md:justify-around text-white">
+      {location.pathname === '/' && (
+        <>
+          <span className="font-bold">The World Map</span>
+          <div className="flex items-center gap-2">
+            <img src={Logo} alt="logo" className="w-10 md:w-12" />
+            <span className="text-lg font-medium">COVID-19 Cases</span>
+          </div>
+        </>
+      )}
+
+      {location.pathname !== '/' && (
+        <>
+          <div className="flex items-center gap-3">
+            <FaAngleLeft onClick={() => navigate(-1)} size={23} className="cursor-pointer" />
+            <span className="font-bold text-xl">{name}</span>
+          </div>
+          <div className="flex items"></div>
+        </>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
