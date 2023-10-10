@@ -1,13 +1,13 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { FaMicrophone, FaRegSun, FaAngleLeft } from 'react-icons/fa';
+import gameCategory from './gameTitle';
 import Logo from '../assets/logo.png';
 
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { name } = useSelector((state) => state.details);
+  const title = Object.values(gameCategory).filter((item) => )
 
   return (
     <nav className="bg-[#ec4c8b] flex items-center justify-between p-3 md:justify-around text-white">
