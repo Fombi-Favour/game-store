@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { FaMicrophone, FaRegSun, FaAngleLeft } from 'react-icons/fa';
-import Logo from '../assets/covid-19.png';
+import Logo from '../assets/logo.png';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -13,10 +13,10 @@ const Navbar = () => {
     <nav className="bg-[#ec4c8b] flex items-center justify-between p-3 md:justify-around text-white">
       {location.pathname === '/' && (
         <>
-          <span className="font-bold">The World Map</span>
+          <span className="font-bold">All Games</span>
           <div className="flex items-center gap-2">
             <img src={Logo} alt="logo" className="w-10 md:w-12" />
-            <span className="text-lg font-medium">COVID-19 Cases</span>
+            <span className="text-lg font-medium">Game Market</span>
           </div>
         </>
       )}
@@ -29,7 +29,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-2">
             <img src={Logo} alt="logo" className="w-10 md:w-12" />
-            <span className="font-semibold text-xl">{`${name}'s Cases`}</span>
+            <span className="font-semibold text-xl">{`${name} Games`}</span>
           </div>
         </>
       )}
