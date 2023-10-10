@@ -45,7 +45,7 @@ const gameCategory = {
   },
   'devil-may-cry': {
     title: 'Devil May Cry',
-    src: 'https://static.wikia.nocookie.net/logopedia/images/6/67/DMC5_logo.png/revision/latest?cb=20210216173855',
+    src: 'https://vgboxart.com/resources/logo/15993_devil-may-cry-5-prev.png',
   },
   hitman: {
     title: 'Hitman',
