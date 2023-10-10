@@ -7,7 +7,7 @@ import Logo from '../assets/logo.png';
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { name } = useSelector((state) => state.home.continent);
+  const { name } = useSelector((state) => state.details);
 
   return (
     <nav className="bg-[#ec4c8b] flex items-center justify-between p-3 md:justify-around text-white">
