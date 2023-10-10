@@ -1,23 +1,20 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-export const initialState = {
-  valueList: [],
-  isloading: false,
+const initialState = {
+  games: [],
+  isLoading: false,
 };
-const url = 'https://corona.lmao.ninja/v2/countries/';
 
-export const fetchCountries = createAsyncThunk('details/fetchCountries', async (name) => {
-  const base = `${url}${name}`;
+const url = 'https://www.cheapshark.com/api/1.0';
+
+export const fetchGames = createAsyncThunk('home/fetchGames', async (title) => {
+  const base = `${url}/games?title=${title}`;
   const response = await fetch(base);
   const res = await response.json();
   return res.map((item) => ({
-    name: item.country,
-    flag: item.countryInfo.flag,
-    continent: item.continent,
-    population: item.population,
-    cases: item.cases,
-    deaths: item.deaths,
-    recovered: item.recovered,
+    id: item.gameID,
+    name: item.external,
+    image: item.thumb,
   }));
 });
 
@@ -26,18 +23,18 @@ const detailsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchCountries.pending, (state) => ({
+    builder.addCase(fetchGames.pending, (state) => ({
       ...state,
-      isloading: true,
+      isLoading: true,
     }))
-      .addCase(fetchCountries.fulfilled, (state, action) => ({
+      .addCase(fetchGames.fulfilled, (state, action) => ({
         ...state,
-        isloading: false,
-        valueList: action.payload,
+        games: action.payload,
+        isLoading: false,
       }))
-      .addCase(fetchCountries.rejected, (state) => ({
+      .addCase(fetchGames.rejected, (state) => ({
         ...state,
-        isloading: false,
+        isLoading: false,
       }));
   },
 });
