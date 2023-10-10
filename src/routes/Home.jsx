@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchGames } from '../redux/details/detailsSlice';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import Gaming from '../assets/gaming.png';
+import gameCategory from '../components/gameTitle';
+import Categories from '../components/Categories';
 
 const Home = () => {
   const [search, setSearch] = useState('');
-  const dispatch = useDispatch();
-  const { games, isLoading } = useSelector((state) => state.details);
-  console.log(games);
-
-  useEffect(() => {
-    dispatch(fetchGames());
-  }, [dispatch]);
+  const { isLoading } = useSelector((state) => state.details);
 
   return (
     <section className="bg-[#fb5092] text-white flex flex-col">
@@ -19,7 +14,8 @@ const Home = () => {
       <div className="flex items-center justify-center">
         <img src={Gaming} alt="world-map" className="w-48 md:w-[24rem]" />
         <div className="flex flex-col">
-          <h3 className="text-[1.654rem] font-semibold">Game Store</h3>
+          <h3 className="text-[2.654rem] font-semibold capitalize">Game Store</h3>
+          <span className="text-[1.254rem]">15 Categories</span>
         </div>
       </div>
       {/* searching sub-section */}
@@ -34,14 +30,16 @@ const Home = () => {
         />
       </div>
       {/* listing sub-section: fetch from api */}
-      <main className="flex flex-row flew-wrap gap-1 justify-center w-full p-0 mb-5">
+      <main className="flex flex-row flex-wrap gap-3 justify-center w-full py-4 mb-5">
         {isLoading ? (
           <div className="flex items-center justify-center mt-20 gap-3">
             <div className="border-8 border-white border-t-[#da2d72] w-20 h-20 text-transparent rounded-full animate-spin">100%</div>
             <h2 className="text-4xl text-white">Loading...</h2>
           </div>
         ) : (
-          <span>Game Categories</span>
+          Object.values(gameCategory).map((index) => (
+            <Categories key={index.title} title={index.title} src={index.src} />
+          ))
         )}
       </main>
     </section>
