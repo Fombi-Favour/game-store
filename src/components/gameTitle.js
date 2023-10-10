@@ -1,4 +1,4 @@
-const imageContinents = {
+const gameCategory = {
   batman: {
     title: 'Batman',
     src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQccGCSlaMmm8FPXZvNtXotWd0XNu5FdS3nt7i5RrP-&s',
@@ -61,4 +61,4 @@ const imageContinents = {
   },
 };
 
-export default imageContinents;
+export default gameCategory;
