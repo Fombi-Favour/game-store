@@ -8,6 +8,10 @@ const Home = () => {
   const [search, setSearch] = useState('');
   const { isLoading } = useSelector((state) => state.details);
 
+  const filterName = Object.values(gameCategory).filter((item) => (
+    item.title.toLowerCase().includes(search.toLowerCase())
+  ));
+
   return (
     <section className="bg-[#fb5092] text-white flex flex-col">
       {/* first sub-section */}
@@ -37,7 +41,7 @@ const Home = () => {
             <h2 className="text-4xl text-white">Loading...</h2>
           </div>
         ) : (
-          Object.values(gameCategory).map((index) => (
+          filterName.map((index) => (
             <Categories key={index.title} title={index.title} src={index.src} />
           ))
         )}
