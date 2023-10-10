@@ -15,7 +15,7 @@ const Navbar = () => {
         <>
           <span className="font-bold">All Games</span>
           <div className="flex items-center gap-2">
-            <img src={Logo} alt="logo" className="w-10 md:w-12" />
+            <img src={Logo} alt="logo" className="w-16" />
             <span className="text-lg font-medium">Game Market</span>
           </div>
         </>
