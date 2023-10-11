@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { FaArrowCircleRight } from 'react-icons/fa';
 
-const Categories = ({ title, src }) => (
+const Categories = ({ title, name, src }) => (
   <NavLink
-    to={`details/${title}`}
+    to={`details/${name}`}
     className="flex flex-col items-end gap-2 p-2 h-[18rem] rounded-xl bg-[#da2d72] shadow-lg transition-all hover:transition-all hover:shadow-2xl hover:shadow-pink-400"
   >
     <div>
@@ -20,6 +20,7 @@ const Categories = ({ title, src }) => (
 
 Categories.propTypes = {
   title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
 };
 
