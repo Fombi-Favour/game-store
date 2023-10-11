@@ -7,7 +7,8 @@ import Logo from '../assets/logo.png';
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const title = Object.values(gameCategory).filter((item) => )
+  const titles = gameCategory[2].title;
+  console.log(titles);
 
   return (
     <nav className="bg-[#ec4c8b] flex items-center justify-between p-3 md:justify-around text-white">
@@ -25,11 +26,11 @@ const Navbar = () => {
         <>
           <div className="flex items-center gap-3">
             <FaAngleLeft onClick={() => navigate(-1)} size={23} className="cursor-pointer" />
-            <span className="font-bold text-xl">{name}</span>
+            <span className="font-bold text-xl">{titles}</span>
           </div>
           <div className="flex items-center gap-2">
             <img src={Logo} alt="logo" className="w-10 md:w-12" />
-            <span className="font-semibold text-xl">{`${name} Games`}</span>
+            <span className="font-semibold text-xl">{`${titles} Games`}</span>
           </div>
         </>
       )}
