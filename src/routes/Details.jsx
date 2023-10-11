@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchGames } from '../redux/details/detailsSlice';
+import GameList from '../components/GameList';
 
 const Details = () => {
   const dispatch = useDispatch();
@@ -35,7 +36,9 @@ const Details = () => {
           <h2 className="text-4xl text-white">Loading...</h2>
         </div>
       ) : (
-        <span>GameList</span>
+        games.map((item) => (
+          <GameList key={item.id} gameList={item} />
+        ))
       )}
     </section>
   );
