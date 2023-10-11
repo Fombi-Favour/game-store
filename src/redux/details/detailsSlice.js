@@ -15,6 +15,7 @@ export const fetchGames = createAsyncThunk('home/fetchGames', async (name) => {
     id: item.gameID,
     title: item.external,
     image: item.thumb,
+    deal: item.cheapest,
   }));
 });
 
