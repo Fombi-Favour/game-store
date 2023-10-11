@@ -7,13 +7,13 @@ const initialState = {
 
 const url = 'https://www.cheapshark.com/api/1.0';
 
-export const fetchGames = createAsyncThunk('home/fetchGames', async (title) => {
-  const base = `${url}/games?title=${title}`;
+export const fetchGames = createAsyncThunk('home/fetchGames', async (name) => {
+  const base = `${url}/games?title=${name}`;
   const response = await fetch(base);
   const res = await response.json();
   return res.map((item) => ({
     id: item.gameID,
-    name: item.external,
+    title: item.external,
     image: item.thumb,
   }));
 });
