@@ -42,7 +42,7 @@ const Home = () => {
           </div>
         ) : (
           filterName.map((index) => (
-            <Categories key={index.title} title={index.title} src={index.src} />
+            <Categories key={index.title} title={index.title} name={index.name} src={index.src} />
           ))
         )}
       </main>
