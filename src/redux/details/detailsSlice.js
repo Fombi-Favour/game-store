@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const initialState = {
+export const initialState = {
   games: [],
   isLoading: false,
 };
