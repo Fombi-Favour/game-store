@@ -13,8 +13,14 @@ const Details = () => {
   const current = gameCategory.find((game) => game.name === name);
 
   useEffect(() => {
-    dispatch(fetchGames(name));
-  }, [dispatch, name]);
+    if (current) {
+      dispatch(fetchGames(name));
+    }
+  }, [dispatch, name, current]);
+
+  if (!current) {
+    return null;
+  }
 
   return (
     <section className="bg-[#fb5092] text-white">
