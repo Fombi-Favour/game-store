@@ -95,7 +95,7 @@
 
 ## 🎥 Presentation <a name="live-demo"></a>
 
-- Check out the presentation for this project [Click here!](https://www.loom.com/share/bb6b0f38c42b4d2faac6bfa1b3095ca9?sid=249d3256-08d0-463f-8527-84d57cccc268)
+- Check out the presentation for this project [Click here!](https://www.loom.com/share/48f4d78c3e514593a71827a267fa2d09?sid=2f52aa73-a896-4bfb-8c81-6b10e215d7d8)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
