@@ -30,15 +30,28 @@
 - [📝 License](#license)
 
 
-# 📖 "COVID-19 Cases Tracker 🦠" project <a name="about-project"></a>
+# 📖 "Game Market 🎮" project <a name="about-project"></a>
 
-![mobile (1)](https://github.com/Fombi-Favour/metrics-webapp/assets/77404317/ae5e5b5c-3c35-47bf-8ea7-4acd6769b8a0)
-![mobile (2)](https://github.com/Fombi-Favour/metrics-webapp/assets/77404317/8c9f87b5-a8a4-4bc2-97f2-400cd9db10ba)
+![mobile 1](https://github.com/Fombi-Favour/metrics-capstone/assets/77404317/db6830ff-94dd-45e1-be3a-9ccc7d6d0909)
+![mobile 2](https://github.com/Fombi-Favour/metrics-capstone/assets/77404317/8d4f1667-0ec2-453a-96ab-365a5ae9be81)
 
-**"COVID-19 Cases Tracker" project** is a responsive tracking website that displays information of cases in different countries, continents and in the whole world. All of these information is fetch from this API
+**"Game Market" project** is a responsive e-commerce website that displays information of games of different categories. All of these information is fetch from this API
 
-- [Continents API](https://corona.lmao.ninja/v2/continents)
-- [Countries API](https://corona.lmao.ninja/v2/countries/)
+- [Batman Category](https://www.cheapshark.com/api/1.0/games?title=batman)
+- [FIFA Category](https://www.cheapshark.com/api/1.0/games?title=fifa)
+- [WWE Category](https://www.cheapshark.com/api/1.0/games?title=wwe)
+- [Action Category](https://www.cheapshark.com/api/1.0/games?title=action)
+- [NBA Category](https://www.cheapshark.com/api/1.0/games?title=nba)
+- [F1 Category](https://www.cheapshark.com/api/1.0/games?title=f1)
+- [Need For Speed Category](https://www.cheapshark.com/api/1.0/games?title=nfs)
+- [LEGO Category](https://www.cheapshark.com/api/1.0/games?title=lego)
+- [Marvel Category](https://www.cheapshark.com/api/1.0/games?title=marvels)
+- [Call of Duty Category](https://www.cheapshark.com/api/1.0/games?title=call-of-duty)
+- [Mortal Kombat Category](https://www.cheapshark.com/api/1.0/games?title=mortal-kombat)
+- [Devil May Cry Category](https://www.cheapshark.com/api/1.0/games?title=devil-may-cry)
+- [Hitman Category](https://www.cheapshark.com/api/1.0/games?title=hitman)
+- [Street Fighter Category](https://www.cheapshark.com/api/1.0/games?title=street-fighter)
+- [Tekken Category](https://www.cheapshark.com/api/1.0/games?title=tekken)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,7 +83,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **Beautiful layouts**
-- **Cool display of the continents and the countries information**
+- **Cool display of the categories and their respective games information**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
