@@ -89,7 +89,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link. Click here!](https://covid-19-ct.netlify.app/)
+- [Live Demo Link. Click here!](https://game-mar23.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
